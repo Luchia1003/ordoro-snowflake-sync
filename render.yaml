@@ -1,0 +1,26 @@
+services:
+  - type: cron
+    name: ordoro-to-snowflake-sync
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python ordoro_to_snowflake.py
+    schedule: "0 3 * * *"   # 每天凌晨3点运行一次
+    envVars:
+      - key: ORDORO_CLIENT_ID
+        sync: false
+      - key: ORDORO_CLIENT_SECRET
+        sync: false
+      - key: SNOWFLAKE_ACCOUNT
+        sync: false
+      - key: SNOWFLAKE_USER
+        sync: false
+      - key: SNOWFLAKE_PASSWORD
+        sync: false
+      - key: SNOWFLAKE_ROLE
+        sync: false
+      - key: SNOWFLAKE_WAREHOUSE
+        sync: false
+      - key: SNOWFLAKE_DATABASE
+        sync: false
+      - key: SNOWFLAKE_SCHEMA
+        sync: false
