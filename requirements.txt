@@ -1,0 +1,4 @@
+pandas
+requests
+cryptography
+snowflake-connector-python[pandas]
