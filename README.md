@@ -1,0 +1,1 @@
+Ordoro + Snowflake inventory sync
